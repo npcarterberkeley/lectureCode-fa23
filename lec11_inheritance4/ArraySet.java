@@ -1,6 +1,9 @@
 package lec11_inheritance4;
 
+import java.sql.Array;
 import java.util.Iterator;
+
+import java.util.List;
 
 public class ArraySet<T> implements Iterable<T> {
     private T[] items;
@@ -95,6 +98,19 @@ public class ArraySet<T> implements Iterable<T> {
         returnSB.append("}");
         return returnSB.toString();
     }
+    // survey question
+//    public void printNonzero() {
+//        List<Integer> list = new ArrayList<>();
+//        list.add(0);
+//        list.add(1);
+//        list.add(2);
+//        Iterator<Integer> seer = list.iterator();
+//        while (seer.hasNext()) {
+//            if (seer.next() != 0) {
+//                System.out.println(seer.next());
+//            }
+//        }
+//    }
 
     /* EXTRA VIDEO CODE
     @Override
@@ -116,6 +132,14 @@ public class ArraySet<T> implements Iterable<T> {
     } */
 
     public static void main(String[] args) {
+        ArraySet<String> s = new ArraySet<>();
+        //s.add(null);
+        s.add("horse");
+        s.add("fish");
+        s.add("house");
+        s.add("fish");
+
+
         ArraySet<Integer> aset = new ArraySet<>();
         aset.add(5);
         aset.add(23);
@@ -140,3 +164,5 @@ public class ArraySet<T> implements Iterable<T> {
     3. Implement an equals() method.
     */
 }
+
+

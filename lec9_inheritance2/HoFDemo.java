@@ -10,7 +10,9 @@ public class HoFDemo {
     }
 
     public static void main(String[] args) {
-        IntUnaryFunction tenX = new TenX();
+        //IntUnaryFunction tenX = new TenX();
+        TenX tenX = new TenX();  // tenX is subclass of IntUnaryFunction
+        //therefore it works.
         System.out.println(do_twice(tenX, 2));
     }
 }
